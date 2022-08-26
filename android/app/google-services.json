@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "187605378876",
+    "project_id": "cast-acac5",
+    "storage_bucket": "cast-acac5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187605378876:android:67b435b3e0f70ef625e039",
+        "android_client_info": {
+          "package_name": "com.ecom.app.ecom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187605378876-6q6foaq4n36vulrt35dpnqp38djoohsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJxcQwwB6pf9dqOiwPmb5q_1efAX9ujVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187605378876-6q6foaq4n36vulrt35dpnqp38djoohsj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
