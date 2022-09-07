@@ -1,10 +1,20 @@
 import 'dart:async';
 
+import 'package:ecom/screens/cart/cart_screen.dart';
+import 'package:ecom/screens/home/home_screen.dart';
+import 'package:ecom/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:ecom/screens/splash/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future  main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -40,12 +50,13 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => HomeScreenWidget();
 }
 class HomeScreenWidget extends State<MyHomePage>{
+
   int _selectedIndex = 0;
    static const TextStyle optionStyle= TextStyle(fontSize: 20);
    static const List<Widget> _widgetOptions = <Widget>[
-     Text('Home',style: optionStyle,),
-     Text("Bag",style: optionStyle,),
-     Text('Profile',style: optionStyle,)
+     HomeScreen(),
+     CartScreen(),
+     ProfileScreen(),
    ];
 
    void _onItemTapped(int index){
@@ -76,6 +87,7 @@ class HomeScreenWidget extends State<MyHomePage>{
          selectedItemColor: Colors.amber[800],
          onTap:_onItemTapped,
        ),
+
      );
    }
 }
