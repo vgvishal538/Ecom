@@ -4,18 +4,33 @@ import 'package:flutter/material.dart';
 
 
 
-class SplashScreen extends StatelessWidget{
-  const SplashScreen({Key? key, required String title}) : super(key: key);
+class SplashScreen extends StatefulWidget{
+  const SplashScreen({Key ? key}):super(key: key);
 
+  @override
+  State<SplashScreen> createState() => _SplashScreenView();
 
-   @override
+  }
+
+  class _SplashScreenView extends State<SplashScreen> {
+
+  @override
+    void initState() {
+    super.initState();
+    openMainScreen();
+  }
+  void openMainScreen(){
+    Future.delayed(const Duration(seconds: 2)).then((value) => setState(() {}));
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:const Text("Home")),
+      appBar: AppBar(title:const Text("")),
       body: const Center(
-        child:Text("Home page",textScaleFactor: 2,)
+          child:Text("Splash",textScaleFactor: 2,),
       ),
     );
   }
 
-}
+  }
+
